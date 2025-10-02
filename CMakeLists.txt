@@ -21,6 +21,9 @@ target_include_directories(Power_meter
 target_sources(Power_meter PRIVATE ${RAPL_UTILS_SRCS})
 target_link_libraries(Power_meter CUDA::nvml)
 
+# Alias for use with FetchContent
+add_library(Power_meter::Power_meter ALIAS Power_meter)
+
 include(GNUInstallDirs)
 
 install(TARGETS Power_meter
