@@ -1,0 +1,11 @@
+@PACKAGE_INIT@
+
+# Set the include dir from CMAKE_INSTALL_INCLUDEDIR
+set(Power_meter_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(Power_meter_CMAKE_DIR "${CMAKE_CURRENT_LIST_DIR}")
+
+set(Power_meter_LIBRARIES
+    Power_meter::Power_meter)
+
+# Include the targets file
+include("${Power_meter_CMAKE_DIR}/Power_meterTargets.cmake")
