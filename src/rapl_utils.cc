@@ -66,6 +66,7 @@ int rapl_utils::init()
   case 0x6c65746e:
     vendor_id = VENDOR_ID::INTEL;
     printf("POWER METER: CPU Vendor ID: Intel\n");
+    break;
   case 0x444d4163:
     vendor_id = VENDOR_ID::AMD;
     printf("POWER METER: CPU Vendor ID: AMD\n");
